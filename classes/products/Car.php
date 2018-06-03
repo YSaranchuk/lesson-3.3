@@ -2,10 +2,10 @@
 namespace classes\products;
 class Car extends ParentForType implements \interfaces\CarInterface
 {
-    public $power = 150;
+    public $power = '300 лошадиных сил';
     public $type = 'Car';
-    public function setCarPower($hp)
+    public function setCarPower($horp)
     {
-        $this->power = $hp;
+        $this->power = $horp;
     }
 }
