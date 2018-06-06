@@ -1,13 +1,18 @@
 <?php
-    function myAutoload($className) {  
+
+    function myAutoload($className)
+    {  
         $pathToFile = $className . '.php';
         $separator = array('\\', '/');
         $pathToFile = str_replace( $separator , DIRECTORY_SEPARATOR, $pathToFile );
-    if (file_exists($pathToFile)) {
-        include "$pathToFile"; 
-    } else {
-        echo "<br><span style=\"font-size: 22px; color: red; font-style: italic; \";>Файл с классом \"$className\" не найден.</span>";
-    }
+        if (file_exists($pathToFile))
+        {
+            include "$pathToFile"; 
+         } 
+         else 
+         {             
+            echo "<br><span style=\"font-size: 22px; color: red; font-style: italic; \";>Файл с классом \"$className\" не найден.</span>";
+         }
     };
     spl_autoload_register('myAutoload');
     $duckEn = new \classes\birds\Scrooge('Scrooge McDuck', '');
@@ -62,34 +67,41 @@
 <body>
 
 <h1>История корзины</h1>
+    
 <?php
+    
     $Baskett = new \classes\Basket();
     $Baskett->addProduct($penParker);
     $Baskett->addProduct($penParker);
     $Baskett->addProduct($penParker);
-
     echo '<br>';
+    
     $Baskett->addProduct($penParker);
     $Baskett->addProduct($tvLG);
     $Baskett->addProduct($tvSony);
     echo '<br>';
+    
     $Baskett->deleteOneProduct($penParker);
     $Baskett->deleteOneProduct($tvSony);
-
     echo '<br>';
+    
     $Baskett->addProduct($Mini);
 ?>
 
 <h1>Вывод корзины</h1>
+    
 <?php
     $Baskett->showAllProduct(); 
 ?>
+    
 <h1>Вывод заказа</h1>
+    
 <?php
     $Order = new \classes\Order();
     $Order->setOrder($Baskett); 
     $Order->showAllProduct(); 
 ?>
+    
 <br>
 <button>Подтвердить заказ</button>
 
