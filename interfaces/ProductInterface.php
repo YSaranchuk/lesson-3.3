@@ -2,7 +2,6 @@
 
     namespace interfaces;
 
-    interface ProductInterface
-    {
+    interface ProductInterface {
         public function setMark();
     }
