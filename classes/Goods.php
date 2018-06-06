@@ -2,8 +2,7 @@
 
     namespace classes;
 
-    abstract class goods
-    {
+    abstract class goods {
         public $title;
         public $price;
     }
