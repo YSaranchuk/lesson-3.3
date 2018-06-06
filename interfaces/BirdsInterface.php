@@ -2,7 +2,6 @@
 
     namespace interfaces;
 
-    interface BirdsInterface
-    {
+    interface BirdsInterface {
         public function makeSound();
     }
