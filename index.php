@@ -1,14 +1,12 @@
 <?php
-    function myAutoload($className)
-    {  
+    function myAutoload($className) {  
         $pathToFile = $className . '.php';
         $separator = array('\\', '/');
         $pathToFile = str_replace( $separator , DIRECTORY_SEPARATOR, $pathToFile );
-        if (file_exists($pathToFile)){
+        if (file_exists($pathToFile)) {
             include "$pathToFile"; 
         } 
-        else 
-        {             
+        else {             
             echo "<br><span style=\"font-size: 22px; color: red; font-style: italic; \";>Файл с классом \"$className\" не найден.</span>";
         }
     };
