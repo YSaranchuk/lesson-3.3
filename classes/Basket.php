@@ -51,7 +51,6 @@
             }
             echo 'Общее количество товаров: ' . $resCountProduct; 
         }
-    
         public function sum()
         { 
             $res = 0;
