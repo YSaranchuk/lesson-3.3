@@ -1,6 +1,8 @@
 <?php
-namespace interfaces;
-interface CarInterface
-{
+
+    namespace interfaces;
+
+    interface CarInterface
+    {
     public function setCarPower($horp);
-}
+    }
