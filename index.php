@@ -10,7 +10,6 @@ function myAutoload($className) {
     }
 };
 spl_autoload_register('myAutoload');
-//($->getPrint()) Добавляемя товары:
 $duckEn = new \classes\birds\Scrooge('Scrooge McDuck', '');
 $duckEn->makeSound(); 
 $penParker = new \classes\products\BallpointPen('Parker Jotter', 3000);
@@ -27,9 +26,6 @@ $tvLG->setMark();
 
 $tvSony = new \classes\products\TV('Sony KD-65XE9305', 46000);
 $tvSony->setMark();
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -70,37 +66,32 @@ $tvSony->setMark();
 
 <h1>История корзины</h1>
 <?php
-//добавляем карзину
 $Baskett = new \classes\Basket();
-// Добавляем три ручки
 $Baskett->addProduct($penParker);
 $Baskett->addProduct($penParker);
 $Baskett->addProduct($penParker);
 
 echo '<br>';
-// Добавляем  одному ручку и 2 телевизор
 $Baskett->addProduct($penParker);
 $Baskett->addProduct($tvLG);
 $Baskett->addProduct($tvSony);
 echo '<br>';
-// Убираем одну ручку и один телевизор
 $Baskett->deleteOneProduct($penParker);
 $Baskett->deleteOneProduct($tvSony);
 
 echo '<br>';
-// Добавляем  машину
 $Baskett->addProduct($Mini);
 ?>
 
 <h1>Вывод корзины</h1>
 <?php
-$Baskett->showAllProduct(); // выводит все продукты
+$Baskett->showAllProduct(); 
 ?>
 <h1>Вывод заказа</h1>
 <?php
 $Order = new \classes\Order();
-$Order->setOrder($Baskett); // создание заказа из карзины
-$Order->showAllProduct(); // выводит весь заказ
+$Order->setOrder($Baskett); 
+$Order->showAllProduct(); 
 ?>
 <br>
 <button>Подтвердить заказ</button>
