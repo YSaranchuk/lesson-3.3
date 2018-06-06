@@ -1,34 +1,28 @@
 <?php
-
     function myAutoload($className)
     {  
         $pathToFile = $className . '.php';
         $separator = array('\\', '/');
         $pathToFile = str_replace( $separator , DIRECTORY_SEPARATOR, $pathToFile );
-        if (file_exists($pathToFile))
-        {
+        if (file_exists($pathToFile)){
             include "$pathToFile"; 
-         } 
-         else 
-         {             
+        } 
+        else 
+        {             
             echo "<br><span style=\"font-size: 22px; color: red; font-style: italic; \";>Файл с классом \"$className\" не найден.</span>";
-         }
+        }
     };
     spl_autoload_register('myAutoload');
     $duckEn = new \classes\birds\Scrooge('Scrooge McDuck', '');
     $duckEn->makeSound(); 
     $penParker = new \classes\products\BallpointPen('Parker Jotter', 3000);
     $penParker->setMark();
-
     $penPero = new \classes\products\BallpointPen('Pero Caran', 3500, 'черная');
     $penPero->setMark();
-
     $Mini = new \classes\products\Car('MINICooper', 1500000);
     $Mini->setMark();
-
     $tvLG = new \classes\products\TV('LG 43UH610V', 49000);
     $tvLG->setMark();
-
     $tvSony = new \classes\products\TV('Sony KD-65XE9305', 46000);
     $tvSony->setMark();
 ?>
@@ -69,7 +63,6 @@
 <h1>История корзины</h1>
     
 <?php
-    
     $Baskett = new \classes\Basket();
     $Baskett->addProduct($penParker);
     $Baskett->addProduct($penParker);
@@ -104,6 +97,5 @@
     
 <br>
 <button>Подтвердить заказ</button>
-
 </body>
 </html>
