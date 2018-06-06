@@ -2,8 +2,7 @@
 
     namespace classes\products;
 
-    class BallpointPen extends ParentForType
-    {
+    class BallpointPen extends ParentForType {
         public $color;
         public function setPenColor($color)
         {
