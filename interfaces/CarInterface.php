@@ -2,7 +2,6 @@
 
     namespace interfaces;
 
-    interface CarInterface
-    {
+    interface CarInterface {
         public function setCarPower($horp);
     }
