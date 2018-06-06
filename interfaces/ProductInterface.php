@@ -4,5 +4,5 @@
 
     interface ProductInterface
     {
-    public function setMark();
+        public function setMark();
     }
