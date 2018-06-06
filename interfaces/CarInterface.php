@@ -4,5 +4,5 @@
 
     interface CarInterface
     {
-    public function setCarPower($horp);
+        public function setCarPower($horp);
     }
