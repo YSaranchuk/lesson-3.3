@@ -2,17 +2,14 @@
 
     namespace classes\birds;
 
-    abstract class Birds extends \classes\Goods implements \interfaces\BirdsInterface
-    {
+    abstract class Birds extends \classes\Goods implements \interfaces\BirdsInterface {
         protected $rich; 
         protected $habbitat;
-        public function __construct($rich, $habbitat)
-        {
+        public function __construct($rich, $habbitat) {
             $this->rich = $rich;
             $this->habbitet = $habbitat;
         }
-        public function makeSound()
-        {
+        public function makeSound() {
             echo $this->rich . ' говорит - "' . $this->sound . '"<br>';
         }
    }
