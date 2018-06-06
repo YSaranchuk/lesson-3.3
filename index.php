@@ -2,7 +2,7 @@
     function myAutoload($className) {  
         $pathToFile = $className . '.php';
         $separator = array('\\', '/');
-        $pathToFile = str_replace( $separator , DIRECTORY_SEPARATOR, $pathToFile );
+        $pathToFile = str_replace( $separator, DIRECTORY_SEPARATOR, $pathToFile );
         if (file_exists($pathToFile)) {
             include "$pathToFile"; 
         } 
