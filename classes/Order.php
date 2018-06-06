@@ -16,7 +16,7 @@
             $resCountProduct = 0;
             foreach($this->countProduct as $key => $value) {
                 echo '<li>'  . $key . ' - ' . $value->numberProduct . ' шт., по ' . $value->price . ' руб.</li>';
-            $resCountProduct = $resCountProduct + $value->numberProduct;
+                $resCountProduct = $resCountProduct + $value->numberProduct;
             }
             $sum = parent::sum();
             echo 'Итого к оплате: ' . $sum . 'рублей.';
