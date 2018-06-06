@@ -1,11 +1,13 @@
 <?php
-namespace classes\products;
-class Car extends ParentForType implements \interfaces\CarInterface
-{
-    public $power = '300 лошадиных сил';
-    public $type = 'Car';
-    public function setCarPower($horp)
+
+    namespace classes\products;
+
+    class Car extends ParentForType implements \interfaces\CarInterface
     {
-        $this->power = $horp;
+        public $power = '300 лошадиных сил';
+        public $type = 'Car';
+        public function setCarPower($horp)
+        {
+           $this->power = $horp;
+        }
     }
-}
